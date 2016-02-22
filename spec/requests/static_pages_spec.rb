@@ -27,6 +27,14 @@ RSpec.describe "StaticPages", type: :request do
       end
     end
 
+    describe "Contact page" do
+      it "should have the content 'Contact'" do
+        visit "/static_pages/contact"
+        expect(page).to have_content("Contact")
+        expect(page).to have_title("Contact")
+      end
+    end
+
   end
 
 
