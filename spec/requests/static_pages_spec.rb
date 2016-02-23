@@ -7,7 +7,7 @@ RSpec.describe "StaticPages", type: :request do
       it "should have content 'rails tutorial'" do
         visit "/static_pages/home"
         expect(page).to have_content("rails tutorial")
-        expect(page).to have_title("Home")
+        expect(page).not_to have_title("Home")
       end
     end
 
